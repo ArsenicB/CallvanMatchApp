@@ -28,8 +28,8 @@ public class SignInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in_activity);
 
-        editTextUserName = (EditText) findViewById(R.id.editTextUserName);
-        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
+        editTextUserName = (EditText) findViewById(R.id.editTextSignInUserName);
+        editTextPassword = (EditText) findViewById(R.id.editTextSignInPassword);
 
         textViewForgotPassword = (TextView) findViewById(R.id.txtSignInForgotPassword);
         textViewRegister = (TextView) findViewById(R.id.txtSignInRegister);

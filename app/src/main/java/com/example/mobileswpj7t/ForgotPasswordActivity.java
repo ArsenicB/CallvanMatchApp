@@ -17,7 +17,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class ForgotPasswordActivity extends AppCompatActivity {
 
-    EditText editTextEmil;
+    EditText editTextEmail;
     FirebaseAuth mAuth;
     ProgressBar progressBar;;
 
@@ -25,7 +25,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_password);
-        editTextEmil = (EditText) findViewById(R.id.editTextForgotPasswordEmail);
+        editTextEmail = (EditText) findViewById(R.id.editTextForgotPasswordEmail);
         mAuth = FirebaseAuth.getInstance();
         progressBar = (ProgressBar) findViewById(R.id.forgotPasswordActivity);
     }
@@ -36,26 +36,26 @@ public class ForgotPasswordActivity extends AppCompatActivity {
     }
 
     private void resetPassword(){
-        String txtEmail = editTextEmil.toString().trim();
+        String txtEmail = editTextEmail.getText().toString().trim();
         if(!Patterns.EMAIL_ADDRESS.matcher(txtEmail).matches()){
-            editTextEmil.setError("올바른 이메일을 입력해 주세요.");
-            editTextEmil.requestFocus();
+            editTextEmail.setError("올바른 이메일을 입력해 주세요.");
+            editTextEmail.requestFocus();
             return;
-        }else{
-            progressBar.setVisibility(View.VISIBLE);
-            mAuth.sendPasswordResetEmail(txtEmail).addOnCompleteListener(new OnCompleteListener<Void>() {
-                @Override
-                public void onComplete(@NonNull Task<Void> task) {
-                    if(task.isSuccessful()){
-                        Toast.makeText(ForgotPasswordActivity.this,"이메일을 확인 바랍니다.",Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(ForgotPasswordActivity.this, SignInActivity.class);
-                        startActivity(intent);
-                    }else{
-                        Toast.makeText(ForgotPasswordActivity.this,"비밀번호 초기화에 실패하였습니다.",Toast.LENGTH_LONG).show();
-                    }
-                    progressBar.setVisibility(View.GONE);
-                }
-            });
         }
+        progressBar.setVisibility(View.VISIBLE);
+        mAuth.sendPasswordResetEmail(txtEmail).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful()){
+                    Toast.makeText(ForgotPasswordActivity.this,"이메일을 확인 바랍니다.",Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(ForgotPasswordActivity.this, SignInActivity.class);
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(ForgotPasswordActivity.this,"비밀번호 초기화에 실패하였습니다.",Toast.LENGTH_LONG).show();
+                }
+                progressBar.setVisibility(View.GONE);
+            }
+        });
+
     }
 }
