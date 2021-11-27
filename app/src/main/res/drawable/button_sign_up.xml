@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="@color/matching"/>
-    <corners android:radius="10dp"/>
-
+    <item android:state_enabled="true">
+        <shape>
+            <solid android:color="@color/matching">
+            </solid>
+            <corners android:radius="10dp">
+            </corners>
+        </shape>
+    </item>
 </selector>

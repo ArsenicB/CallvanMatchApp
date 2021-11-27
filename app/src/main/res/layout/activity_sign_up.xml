@@ -50,7 +50,7 @@
         android:layout_marginTop="30dp"
         android:ems="10"
         android:hint="Password"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="@+id/editTextUserName"
         app:layout_constraintStart_toStartOf="@+id/editTextUserName"
         app:layout_constraintTop_toBottomOf="@+id/editTextUserName" />
@@ -62,7 +62,7 @@
         android:layout_marginTop="30dp"
         android:ems="10"
         android:hint="MobileNo"
-        android:inputType="textPersonName"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="@+id/editTextPassword"
         app:layout_constraintStart_toStartOf="@+id/editTextPassword"
         app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
@@ -74,12 +74,12 @@
         android:layout_marginTop="30dp"
         android:ems="10"
         android:hint="Email"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="@+id/editTextPhoneNo"
         app:layout_constraintStart_toStartOf="@+id/editTextPhoneNo"
         app:layout_constraintTop_toBottomOf="@+id/editTextPhoneNo" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <Button
         android:id="@+id/button3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
