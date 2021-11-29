@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileSWPJ7T">
         <activity
+            android:name=".PostActivity"
+            android:exported="false" />
+        <activity
             android:name=".TaxiActivity"
             android:exported="false" />
         <activity
@@ -20,7 +23,7 @@
             android:exported="false" />
         <activity
             android:name=".DashboardActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".ForgotPasswordActivity"
             android:exported="false" />

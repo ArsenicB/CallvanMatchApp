@@ -16,13 +16,14 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class SignInActivity extends AppCompatActivity {
     EditText editTextUserName, editTextPassword;
     TextView textViewForgotPassword, textViewRegister;
     ProgressBar progressBar;
 
-    FirebaseAuth mAuth;
+    FirebaseAuth mAuth = FirebaseAuth.getInstance();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,9 +35,6 @@ public class SignInActivity extends AppCompatActivity {
         textViewForgotPassword = (TextView) findViewById(R.id.txtSignInForgotPassword);
         textViewRegister = (TextView) findViewById(R.id.txtSignInRegister);
         progressBar = (ProgressBar) findViewById(R.id.progressBarSignIn);
-
-        mAuth = FirebaseAuth.getInstance();
-
     }
 
     public void txtSignInForgotPasswordClicked(View v){
@@ -47,6 +45,17 @@ public class SignInActivity extends AppCompatActivity {
     public void txtSignInRegisterClicked(View v){
         Intent intent = new Intent(this,SignUpActivity.class);
         startActivity(intent);
+    }
+
+    //자동 로그인
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser user = mAuth.getCurrentUser();
+        if(user !=null){
+            Toast.makeText(this,"자동 로그인 되었습니다.",Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(SignInActivity.this,DashboardActivity.class));
+        }
     }
 
     public void buttonSignInScrSignInClicked(View v){
@@ -62,6 +71,7 @@ public class SignInActivity extends AppCompatActivity {
                 editTextPassword.setError("비밀번호는 6자 이상이어야 합니다.");
                 editTextPassword.requestFocus();
             }
+            //제대로 입력
         }else{
             progressBar.setVisibility(View.VISIBLE);
 
@@ -69,9 +79,14 @@ public class SignInActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
+
                         progressBar.setVisibility(View.GONE);
-                        Toast.makeText(SignInActivity.this,"로그인에 성공 했습니다.", Toast.LENGTH_LONG).show();
-                        startActivity(new Intent(SignInActivity.this,DashboardActivity.class));
+                        FirebaseUser user = mAuth.getCurrentUser();
+                        if(user!=null){
+                            Toast.makeText(SignInActivity.this,"로그인에 성공 했습니다.", Toast.LENGTH_LONG).show();
+                            startActivity(new Intent(SignInActivity.this,DashboardActivity.class));
+                        }
+
                     }else{
                         progressBar.setVisibility(View.GONE);
                         Toast.makeText(SignInActivity.this,"로그인에 실패 했습니다.", Toast.LENGTH_LONG).show();

@@ -3,4 +3,6 @@
     <string name="UserName">UserName</string>
     <string name="menu_drawer_open">Drawer Open</string>
     <string name="menu_drawer_close">Drawer Close</string>
+    <string name="board">게시판</string>
+    <string name="taxi">합승</string>
 </resources>

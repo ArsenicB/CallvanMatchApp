@@ -63,7 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="38dp"
         android:layout_marginEnd="10dp"
-        android:text="Register"
+        android:text="회원가입"
         android:onClick="txtSignInRegisterClicked"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

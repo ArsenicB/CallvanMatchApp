@@ -13,7 +13,13 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.SetOptions;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -24,6 +30,7 @@ public class SignUpActivity extends AppCompatActivity {
     ProgressBar progressBar;
 
     private FirebaseAuth mAuth;
+    private FirebaseFirestore mStore = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,6 +86,17 @@ public class SignUpActivity extends AppCompatActivity {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
                                         if(task.isSuccessful()){
+                                            FirebaseUser user = mAuth.getCurrentUser();
+                                            if(user !=null){
+                                                Map<String, Object> userMap = new HashMap<>();
+                                                userMap.put(FirebaseID.documentId,user.getUid());
+                                                userMap.put(FirebaseID.email,txtEmail);
+                                                userMap.put(FirebaseID.password,txtPassword);
+                                                userMap.put(FirebaseID.phoneNo,txtPhoneNo);
+                                                userMap.put(FirebaseID.nicname,txtUserName);
+                                                mStore.collection(FirebaseID.user).document(user.getUid()).set(userMap, SetOptions.merge());
+                                                finish();
+                                            }
                                             Toast.makeText(SignUpActivity.this,"회원가입이 성공적으로 되었습니다!!!",Toast.LENGTH_LONG).show();;
                                             progressBar.setVisibility(View.GONE);
                                         }else{
