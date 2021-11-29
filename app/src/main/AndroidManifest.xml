@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileSWPJ7T">
         <activity
+            android:name=".TaxiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BoardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DrawerBaseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="false"/>
+        <activity
             android:name=".ForgotPasswordActivity"
             android:exported="false" />
         <activity

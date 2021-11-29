@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_Board"
+            android:icon="@drawable/ic_board"
+            android:title="게시판"/>
+        <item android:id="@+id/nav_Taxi"
+            android:icon="@drawable/ic_taxi"
+            android:title="합승"/>
+    </group>
+
+</menu>
