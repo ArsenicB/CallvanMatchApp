@@ -10,11 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileSWPJ7T">
         <activity
+            android:name=".Post2Activity"
+            android:exported="false" />
+        <activity
             android:name=".PostActivity"
             android:exported="false" />
         <activity
             android:name=".TaxiActivity"
             android:exported="false" />
+
         <activity
             android:name=".BoardActivity"
             android:exported="false" />
@@ -37,11 +41,10 @@
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
+    </activity>
         <activity
             android:name=".SignUpActivity"
             android:exported="false" />
