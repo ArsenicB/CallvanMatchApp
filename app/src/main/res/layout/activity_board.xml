@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    tools:context=".BoardActivity">
+    <!--
+        왜인지 모르겠으나 이게 택시 UI를 구성함
+        -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/Start_spin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:prompt="@string/spinner_start"
+            android:entries="@array/starting"
+            android:background="@drawable/spinner_background"/>
+        <Spinner
+            android:id="@+id/End_spin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:prompt="@string/spinner_end"
+            android:entries="@array/Ending"
+            android:background="@drawable/spinner_background"/>
+
+        <Button
+            android:id="@+id/new_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_sign_up"
+            android:backgroundTint="@null"
+            android:text="새로만들기"
+            android:onClick="btnNew"
+            android:textStyle="bold"
+            tools:ignore="OnClick" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:text="           출발지       |         도착지                         "
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/taxi_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="587dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <Button
+            android:id="@+id/join_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="새로고침" />
+    </LinearLayout>
+
+</LinearLayout>

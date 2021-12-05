@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Ending">
+        <item>천안아산역</item>
+        <item>천안역</item>
+        <item>트라팰리스</item>
+        <item>온양온천</item>
+    </string-array>
+    <string-array name="starting">
+        <item>본관</item>
+        <item>자연관</item>
+        <item>인문관</item>
+        <item>기숙사</item>
+        <item>보건관</item>
+    </string-array>
+</resources>
