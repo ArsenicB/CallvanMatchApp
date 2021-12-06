@@ -47,16 +47,16 @@ public class SignInActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    //자동 로그인
-    @Override
-    protected void onStart() {
-        super.onStart();
-        FirebaseUser user = mAuth.getCurrentUser();
-        if(user !=null){
-            Toast.makeText(this,"자동 로그인 되었습니다.",Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(SignInActivity.this,DashboardActivity.class));
-        }
-    }
+//    //자동 로그인
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//        FirebaseUser user = mAuth.getCurrentUser();
+//        if(user !=null){
+//            Toast.makeText(this,"자동 로그인 되었습니다.",Toast.LENGTH_SHORT).show();
+//            startActivity(new Intent(SignInActivity.this,DashboardActivity.class));
+//        }
+//    }
 
     public void buttonSignInScrSignInClicked(View v){
         String userName = editTextUserName.getText().toString().trim();

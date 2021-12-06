@@ -93,6 +93,7 @@
             android:layout_height="wrap_content"
             android:text="새로 만들기"
             android:layout_margin="3dp"
+            android:onClick="newMatching"
             android:background="@drawable/button_sign_up"
             android:backgroundTint="@null"/>
     </LinearLayout>

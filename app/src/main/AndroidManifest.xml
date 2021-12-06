@@ -11,45 +11,64 @@
         android:theme="@style/Theme.MobileSWPJ7T">
         <activity
             android:name=".Post2Activity"
+            android:label="Post2Activity"
             android:exported="false" />
         <activity
             android:name=".PostActivity"
+            android:label="PostActivity"
             android:exported="false" />
         <activity
             android:name=".TaxiActivity"
+            android:label="TaxiActivity"
             android:exported="false" />
-
+        <activity
+            android:name=".JoinTaxiActivity"
+            android:label="JoinTaxiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NewTaxiActivity"
+            android:label="NewTaxiActivity"
+            android:exported="false" />
         <activity
             android:name=".BoardActivity"
+            android:label="BoardActivity"
             android:exported="false" />
         <activity
             android:name=".DrawerBaseActivity"
+            android:label="DrawerBaseActivity"
             android:exported="false" />
         <activity
             android:name=".DashboardActivity"
+            android:label="DashboardActivity"
             android:exported="false" />
         <activity
             android:name=".ForgotPasswordActivity"
+            android:label="ForgotPasswordActivity"
             android:exported="false" />
         <activity
             android:name=".SignInActivity"
+            android:label="SignInActivity"
             android:exported="false" />
         <activity
             android:name=".WelcomeActivity"
+            android:label="WelcomeActivity"
             android:exported="false" />
         <activity
             android:name=".SplashActivity"
+            android:label="SplashActivity"
             android:exported="true">
             <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-        <category android:name="android.intent.category.LAUNCHER" />
-    </intent-filter>
-    </activity>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".SignUpActivity"
+            android:label="SignUpActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:label="MainActivity"
             android:exported="true" />
     </application>
 

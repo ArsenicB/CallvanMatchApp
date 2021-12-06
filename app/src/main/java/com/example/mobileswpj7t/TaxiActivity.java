@@ -35,7 +35,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class TaxiActivity extends DrawerBaseActivity implements View.OnClickListener, RecyclerViewItemClickListener.OnItemClickListener {
+public class TaxiActivity extends DrawerBaseActivity implements RecyclerViewItemClickListener.OnItemClickListener {
 
     private String startT="",endT="";
     private TextView mtext;
@@ -57,10 +57,7 @@ public class TaxiActivity extends DrawerBaseActivity implements View.OnClickList
         setContentView(activityBoardBinding.getRoot());
         allocateActivityTitle("콜밴 합승");
 
-
         recyclerView = findViewById(R.id.taxi_recyclerview);
-
-        findViewById(R.id.new_btn).setOnClickListener(this);
 
         recyclerView.addOnItemTouchListener(new RecyclerViewItemClickListener(this,recyclerView,this));
     }
@@ -92,9 +89,9 @@ public class TaxiActivity extends DrawerBaseActivity implements View.OnClickList
         });
     }
 
-    @Override
-    public void onClick(View v) {
-        startActivity(new Intent(this, NewTaxiActivity.class));
+    public void newMatching(View view){
+        Intent intent = new Intent(TaxiActivity.this,NewTaxiActivity.class);
+        startActivity(intent);
     }
 
     @Override

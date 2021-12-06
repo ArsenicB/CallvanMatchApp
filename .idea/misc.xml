@@ -11,19 +11,23 @@
         <entry key="..\:/Users/kohyu/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/drawable/ic_edit.xml" value="0.4427083333333333" />
         <entry key="..\:/Users/kohyu/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/drawable/ic_launcher_background.xml" value="0.20555555555555555" />
         <entry key="..\:/Users/kohyu/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/drawable/ic_taxi.xml" value="0.20555555555555555" />
-        <entry key="..\:/Users/kohyu/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/layout/activity_board.xml" value="0.43333333333333335" />
+        <entry key="..\:/Users/kohyu/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/layout/activity_board.xml" value="0.33" />
         <entry key="..\:/Users/kohyu/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/layout/activity_dashboard.xml" value="0.15070921985815602" />
         <entry key="..\:/Users/kohyu/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/layout/activity_drawer_base.xml" value="0.20542046605876393" />
         <entry key="..\:/Users/kohyu/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/layout/activity_forgot_password.xml" value="0.4265625" />
+        <entry key="..\:/Users/kohyu/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/layout/activity_join_taxi.xml" value="0.43385416666666665" />
         <entry key="..\:/Users/kohyu/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/layout/activity_main.xml" value="0.15881458966565348" />
+        <entry key="..\:/Users/kohyu/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/layout/activity_main2.xml" value="0.43385416666666665" />
+        <entry key="..\:/Users/kohyu/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/layout/activity_new_taxi.xml" value="0.21073961499493415" />
         <entry key="..\:/Users/kohyu/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/layout/activity_phone_auth.xml" value="0.15932117527862208" />
         <entry key="..\:/Users/kohyu/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/layout/activity_post.xml" value="0.207193515704154" />
         <entry key="..\:/Users/kohyu/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/layout/activity_post2.xml" value="0.19376899696048633" />
         <entry key="..\:/Users/kohyu/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/layout/activity_register.xml" value="0.15881458966565348" />
-        <entry key="..\:/Users/kohyu/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/layout/activity_sign_in_activity.xml" value="0.428125" />
+        <entry key="..\:/Users/kohyu/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/layout/activity_sign_in_activity.xml" value="0.1" />
         <entry key="..\:/Users/kohyu/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/layout/activity_sign_up.xml" value="0.5" />
         <entry key="..\:/Users/kohyu/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/layout/activity_splash.xml" value="0.15932117527862208" />
         <entry key="..\:/Users/kohyu/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/layout/activity_taxi.xml" value="0.1" />
+        <entry key="..\:/Users/kohyu/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/layout/activity_taxi2.xml" value="0.21073961499493415" />
         <entry key="..\:/Users/kohyu/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/layout/activity_welcome.xml" value="0.16109422492401215" />
         <entry key="..\:/Users/kohyu/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/layout/content_layout.xml" value="0.207193515704154" />
         <entry key="..\:/Users/kohyu/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/layout/item_post.xml" value="0.207193515704154" />
@@ -31,18 +35,6 @@
         <entry key="..\:/Users/kohyu/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/layout/main_drawer_header.xml" value="0.5" />
         <entry key="..\:/Users/kohyu/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/menu/main_drawer_menu.xml" value="0.33" />
         <entry key="..\:/Users/kohyu/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.22592592592592592" />
-        <entry key="..\:/Users/skawk/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/drawable/bg_spinner.xml" value="0.1" />
-        <entry key="..\:/Users/skawk/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/drawable/button_sign_in.xml" value="0.1" />
-        <entry key="..\:/Users/skawk/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/drawable/spinner_background.xml" value="0.1" />
-        <entry key="..\:/Users/skawk/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/drawable/spinner_item.xml" value="0.1" />
-        <entry key="..\:/Users/skawk/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/layout/activity_board.xml" value="0.1" />
-        <entry key="..\:/Users/skawk/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/layout/activity_drawer_base.xml" value="0.1" />
-        <entry key="..\:/Users/skawk/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/layout/activity_post.xml" value="0.25" />
-        <entry key="..\:/Users/skawk/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/layout/activity_sign_in_activity.xml" value="0.1490036231884058" />
-        <entry key="..\:/Users/skawk/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/layout/activity_taxi.xml" value="0.1" />
-        <entry key="..\:/Users/skawk/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/layout/item_post.xml" value="0.19895833333333332" />
-        <entry key="..\:/Users/skawk/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/layout/item_taxi.xml" value="0.33" />
-        <entry key="..\:/Users/skawk/AndroidStudioProjects/MobileSWPJ7T/app/src/main/res/layout/spinner_item.xml" value="0.1" />
       </map>
     </option>
   </component>
