@@ -5,4 +5,6 @@
     <string name="menu_drawer_close">Drawer Close</string>
     <string name="board">게시판</string>
     <string name="taxi">합승</string>
+    <string name="spinner_start">출발지</string>
+    <string name="spinner_end">도착지</string>
 </resources>
