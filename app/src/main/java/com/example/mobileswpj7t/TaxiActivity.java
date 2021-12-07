@@ -35,7 +35,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class TaxiActivity extends DrawerBaseActivity implements RecyclerViewItemClickListener.OnItemClickListener {
+public class TaxiActivity extends DrawerBaseActivity implements RecyclerViewItemClickListener.OnItemClickListener, View.OnClickListener {
 
     private String startT="",endT="";
     private TextView mtext;
@@ -56,6 +56,8 @@ public class TaxiActivity extends DrawerBaseActivity implements RecyclerViewItem
         activityBoardBinding = ActivityBoardBinding.inflate(getLayoutInflater());
         setContentView(activityBoardBinding.getRoot());
         allocateActivityTitle("콜밴 합승");
+
+        findViewById(R.id.new_btn).setOnClickListener(this);
 
         recyclerView = findViewById(R.id.taxi_recyclerview);
 
@@ -89,11 +91,6 @@ public class TaxiActivity extends DrawerBaseActivity implements RecyclerViewItem
         });
     }
 
-    public void newMatching(View view){
-        Intent intent = new Intent(TaxiActivity.this,NewTaxiActivity.class);
-        startActivity(intent);
-    }
-
     @Override
     public void onItemClick(View view, int position) {
 
@@ -103,6 +100,12 @@ public class TaxiActivity extends DrawerBaseActivity implements RecyclerViewItem
     public void onItemLongClick(View view, int position) {
         Intent intent = new Intent(this,JoinTaxiActivity.class);
         intent.putExtra(FirebaseID.documentId, mDatas.get(position).getDocumentId());
+        startActivity(intent);
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent intent = new Intent(TaxiActivity.this,NewTaxiActivity.class);
         startActivity(intent);
     }
 }

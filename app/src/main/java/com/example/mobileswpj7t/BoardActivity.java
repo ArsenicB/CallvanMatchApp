@@ -108,4 +108,5 @@ public class BoardActivity extends DrawerBaseActivity implements View.OnClickLis
         dialog.setTitle("삭제 알림");
         dialog.show();
     }
+
 }

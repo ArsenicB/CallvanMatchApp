@@ -16,6 +16,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -76,14 +77,16 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/taxi_recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="587dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="7"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="horizontal"
+        android:layout_weight="1"
         android:paddingLeft="10dp"
         android:paddingRight="10dp">
 
@@ -93,7 +96,6 @@
             android:layout_height="wrap_content"
             android:text="새로 만들기"
             android:layout_margin="3dp"
-            android:onClick="newMatching"
             android:background="@drawable/button_sign_up"
             android:backgroundTint="@null"/>
     </LinearLayout>
